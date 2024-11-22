@@ -14,3 +14,8 @@ FROM books;
 
 SELECT title, author
 FROM books;
+
+-- Select all fields from the books table. As in many languages use "*" if you want to select all
+-- Select all fields from the books table
+SELECT *
+FROM books;
