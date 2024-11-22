@@ -27,3 +27,17 @@ SELECT *
 -- Select unique authors from the books table
 SELECT DISTINCT author
     FROM books;
+
+-- Aliasing
+-- Add an alias to the SQL query to rename the author column to unique_author in the result set.
+
+-- Alias author so that it becomes unique_author
+SELECT DISTINCT author AS unique_author
+    FROM books;
+
+-- VIEWing your query
+-- Add a single line of code that saves the results of the written query as a view called library_authors.
+-- Save the results of this query as a view called library_authors
+CREATE VIEW library_authors AS
+    SELECT DISTINCT author AS unique_author
+    FROM books;
