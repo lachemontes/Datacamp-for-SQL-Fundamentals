@@ -7,15 +7,23 @@
 
 -- Return all titles from the books table
 SELECT title 
-FROM books;
+    FROM books;
 
 -- Select both the title and author fields from books.
 -- Select title and author from the books table
 
 SELECT title, author
-FROM books;
+    FROM books;
 
 -- Select all fields from the books table. As in many languages use "*" if you want to select all
 -- Select all fields from the books table
 SELECT *
-FROM books;
+    FROM books;
+
+-- Making queries DISTINCT
+
+-- Write SQL code that returns a result set with just one column listing the unique authors in the books table.
+
+-- Select unique authors from the books table
+SELECT DISTINCT author
+    FROM books;
