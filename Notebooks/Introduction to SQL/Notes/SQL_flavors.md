@@ -15,7 +15,9 @@ PostgreSQL" is used to refer to both the database system itself as well as the S
 
 ### SQLserver
 
-SQL Server is also a relational database system which comes in both free and enterprise versions. It was created by Microsoft, so it pairs well with other Microsoft products. T-SQL is Microsoft's proprietary flavor of SQL, used with SQL Server databases.
+SQL Server is also a relational database system which comes in both free and enterprise versions. It was created by Microsoft, so it pairs well with other Microsoft products.
+
+ T-SQL is Microsoft's proprietary flavor of SQL, used with SQL Server databases.
 
 Has free and paid version.
 
