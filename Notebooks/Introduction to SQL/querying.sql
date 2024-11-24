@@ -53,3 +53,5 @@ CREATE VIEW library_authors AS
 SELECT genre
 	FROM books
 LIMIT 10;
+
+-- Quering a database

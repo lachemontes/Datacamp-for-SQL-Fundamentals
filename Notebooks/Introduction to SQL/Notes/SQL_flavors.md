@@ -37,4 +37,16 @@ SELECT TOP (2) id, name
 
 
 
+
+```
+
+## Querying a database
+
+While SQL can be used to create and modify databases, the focus of this course will be querying databases. Recall that a query is a request for data from a database. In this course, we'll look at how to execute a query for a database using keywords that will enable us to count and view all or a specified amount of records. We'll go over common SQL errors, style guidelines, and the order in which our code will execute. We'll cover how to filter data using various techniques, how to use aggregate functions, and finally, how to sort and group the results. We'll be using PostgreSQL throughout.
+
+`COUNT ()` counts the number of records with a value in a field.
+
+```sql
+SELECT COUNT (birthdate) AS count_birthdates 
+	FROM people;
 ```
