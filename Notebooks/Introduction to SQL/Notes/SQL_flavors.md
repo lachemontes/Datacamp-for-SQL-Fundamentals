@@ -118,3 +118,8 @@ So in the output, instead of seeing a generic column name like `COUNT(*)`, you w
 Often query results will include many duplicate values. You can use the `DISTINCT` keyword to select the unique values from a field.
 
 This might be useful if, for example, you're interested in knowing which languages are represented in the `films` table. See if you can find out what countries are represented in this table with the following exercises.
+
+https://rahuldkjain.github.io/gh-profile-readme-generator/
+
+
+[![Header]()](https://github.com/lachemontes)
