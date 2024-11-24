@@ -54,4 +54,4 @@ SELECT genre
 	FROM books
 LIMIT 10;
 
--- Quering a database
+
