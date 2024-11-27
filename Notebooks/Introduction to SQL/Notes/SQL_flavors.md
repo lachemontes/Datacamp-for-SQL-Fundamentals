@@ -110,3 +110,15 @@ FROM people;
 So in the output, instead of seeing a generic column name like `COUNT(*)`, you will see the heading named `count_records`, which indicates what the number represents.
 
 **SELECT DISTINCT**
+
+## 
+
+## SQL style
+
+SQL is a generous language when it comes to formatting. New lines, capitalization, and indentation are not required in SQL as they sometimes are in other programming languages. For example, the code on this slide will run just fine, returning the first three titles, release years, and countries from the films table. However, writing queries like this won't make us any friends in the SQL world because the lack of formatting makes the code difficult to read, especially as queries become more complex.
+
+Formating in not required
+
+```sql
+select title, release_year, country from films limit 3
+```
