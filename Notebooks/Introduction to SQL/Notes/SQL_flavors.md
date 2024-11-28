@@ -141,8 +141,6 @@ FROM films
 LIMIT 3;
 ```
 
-
-
 ### Semicolon
 
 Have you noticed the sample code we've been looking at throughout this lesson has a semicolon at the end? Like capitalization and new lines, this semicolon is unnecessary in PostgreSQL; we could leave it out of the query and still expect the same results with no errors. However, including a semicolon at the end of the query is considered best practice for several reasons. First, some SQL flavors require it, so it's a good habit to have. Including a semicolon in a PostgreSQL query means that the query is more easily translated to another flavor if necessary. Additionally, like a period at the end of a sentence, a semicolon at the end of a query indicates its end, which is helpful in a file containing several queries.
@@ -152,3 +150,67 @@ Have you noticed the sample code we've been looking at throughout this lesson ha
 02:47 - 03:27
 
 One last note on SQL style: while we can ensure our code is formatted beautifully, we don't have control over other people's SQL style. When creating a table, a SQL mistake is including spaces in a field name. To query that table, we'll need to enclose the field name in double-quotes to indicate that, despite being two words, the name refers to just one field. For example, if a sloppy SQL coder had named a field release-space-year as two words, we'd need to update the query we've seen throughout this chapter to the one shown here.
+
+## Filtering Records
+
+To filter, we need to use a new clause called WHERE, `which` allows us to focus on only the data relevant to our business questions. Going back to our coat analogy, we may want to select a coat from the closet
+
+```sql
+SELECT title
+FROM films
+WHERE release_year > 1960;
+```
+
+### Comparison operators
+
+Let's explore some of the other operators. We would use the less-than operator to see films released before the year 1960.
+
+```sql
+SELECT title
+FROM films
+WHERE release_year < 1960;
+```
+
+We would use the less than or equal to operator to see films released during or before the year 1960.
+
+```sql
+SELECT title
+FROM films
+WHERE release_year <= 1960;
+```
+
+If we want to see films released in a specific year, we can use equals.
+
+```sql
+SELECT title
+FROM films
+WHERE release_year = 1960;
+```
+
+Here is a final example that isn't as intuitive as the others. If we wanted to filter films to see all releases EXCEPT those from the year 1960, we would combine the less than and greater than symbols as shown here. This is the SQL standard symbol that means "not equal to".
+
+```sql
+SELECT title
+FROM films
+WHERE release_year <> 1960;
+```
+
+Let's recap all the comparison operators we can use with WHERE to filter numbers. We have: greater than (that also means after), less than (that also means before), equal to, greater than or equal to, less than or equal to, and not equal to.
+
+`WHERE` and the comparison operator, equals, can also be used with strings. In these cases, we will have to use single quotation marks around the strings we want to filter. For example, here, we want to filter titles where the country is Japan.
+
+```sql
+SELECT title
+FROM films
+WHERE country = 'Japan';
+```
+
+A final note on using `WHERE`. Similar to ` LIMIT`, this clause comes after the FROM statement when writing a query. If we use both WHERE and LIMIT, the written order will be SELECT, FROM, WHERE, LIMIT; however, the order of execution will now be FROM, WHERE, SELECT, LIMIT. Thinking about the coats in our closet, we go to the closet we want to get the coat from, find where the green coats are, and select five of them.
+
+```sql
+-- Written code
+SELECT item
+FROM coats
+WHERE colo = 'green';
+LIMIT 5;
+```
