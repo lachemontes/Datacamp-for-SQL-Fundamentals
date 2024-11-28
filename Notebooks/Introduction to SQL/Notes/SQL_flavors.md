@@ -211,6 +211,14 @@ A final note on using `WHERE`. Similar to ` LIMIT`, this clause comes after the 
 -- Written code
 SELECT item
 FROM coats
-WHERE colo = 'green';
+WHERE color = 'green';
 LIMIT 5;
+```
+
+```sql
+-- Order of execution
+3. SELECT item
+1. FROM coats
+2. WHERE colo = 'green';
+4. LIMIT 5;
 ```
